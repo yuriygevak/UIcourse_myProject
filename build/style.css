@@ -1,0 +1,341 @@
+.bg01d {
+  background-image: url("images/01d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF00;
+}
+.bg02d {
+  background-image: url("images/02d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg03d {
+  background-image: url("images/03d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #76FF03;
+}
+.bg04d {
+  background-image: url("images/04d.jpeg");
+  background-position: center;
+  background-size: 100%;
+  color: #000;
+}
+.bg09d {
+  background-image: url("images/09d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg10d {
+  background-image: url("images/10d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #76FF03;
+}
+.bg11d {
+  background-image: url("images/11d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg13d {
+  background-image: url("images/13d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg50d {
+  background-image: url("images/50d.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg01n {
+  background-image: url("images/01n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg02n {
+  background-image: url("images/02n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg03n {
+  background-image: url("images/03n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg04n {
+  background-image: url("images/04n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg09n {
+  background-image: url("images/09n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg10n {
+  background-image: url("images/10n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #76FF03;
+}
+.bg11n {
+  background-image: url("images/11n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg13n {
+  background-image: url("images/13n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF8D;
+}
+.bg50n {
+  background-image: url("images/50n.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #FFFF00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.header {
+  background-color: #263238;
+  margin-bottom: 0;
+  border: none;
+  padding: 20px 40px 20px 40px;
+  font-family: "Indie Flower";
+}
+.header .app-name {
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #76FF03;
+}
+.header .app-name:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.header .temp-unit-select {
+  background-color: #263238;
+  border: 1px solid #76FF03;
+  border-radius: 2px;
+  color: #76FF03;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 5px 3px 5px;
+  outline: none;
+  cursor: pointer;
+}
+.header .temp-unit-select:hover {
+  background-color: #006064;
+  color: #fff;
+}
+.header .temp-unit-select .temp-unit-option {
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.main-container {
+  overflow: auto;
+  background-color: #BBDEFB;
+  padding: 0 20px 80px 20px;
+  font-family: "Indie Flower";
+}
+.main-container .time-block {
+  text-align: center;
+}
+.main-container .time-block .time-clock {
+  margin: 15px 0;
+  font-size: 25px;
+  font-style: bolder;
+  color: #76FF03;
+}
+.main-container .current-forecast {
+  width: 99%;
+  padding: 0 15px 100px;
+}
+.main-container .current-forecast .city-form .city-input {
+  width: 70%;
+  display: inline-block;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 19px;
+  outline: none;
+  color: #000;
+  box-shadow: inset 0 0 6px;
+}
+.main-container .current-forecast .city-form .city-input-button {
+  width: 25%;
+  display: inline-block;
+  padding: 7px 1px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #263238 !important;
+  border: 1px solid #006064;
+  font-size: 19px;
+  font-weight: bold;
+  color: #76FF03;
+  outline: none;
+  box-shadow: inset 0 0 6px;
+}
+.main-container .current-forecast .city-form .city-input-button:hover {
+  background-color: #006064 !important;
+  color: #fff;
+}
+.main-container .current-forecast .current-weather {
+  margin-top: 15px;
+  font-size: 18px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.main-container .current-forecast .current-weather .current-weather-city {
+  background-color: #FFF3E0;
+  color: #263238;
+  font-size: 22px;
+  font-weight: bold;
+}
+.main-container .current-forecast .current-weather .current-weather-item {
+  background-color: #FFF3E0;
+  color: #263238;
+  font-size: 18px;
+}
+.main-container .current-forecast .current-weather .description {
+  font-weight: 700;
+}
+.main-container .main-forecast-block {
+  padding: 0 15px;
+}
+.main-container .main-forecast-block .city-name {
+  margin: 15px 0;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #76FF03;
+}
+.main-container .main-forecast-block .day-links {
+  width: 100%;
+}
+.main-container .main-forecast-block .day-links .day-link {
+  width: 14%;
+  background-color: #263238;
+  border: 1px solid #006064;
+  border-radius: 3px;
+  color: #76FF03;
+  padding: 7px 0;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: inset 0 0 6px;
+}
+.main-container .main-forecast-block .day-links .day-link:hover {
+  background-color: #006064;
+  color: #fff;
+}
+.main-container .main-forecast-block .day-links .more-days-button {
+  width: 15%;
+}
+.main-container .main-forecast-block .forecast-description {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list {
+  list-style-type: none;
+  border-left: 1px solid #80CBC4;
+  border-right: 1px solid #80CBC4;
+  border-bottom: 1px solid #80CBC4;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list .forecast-description-item {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list .time-description {
+  width: 15%;
+  text-align: center;
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list .weather-image-description {
+  width: 25%;
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list .temperature-description,
+.main-container .main-forecast-block .forecast-description .forecast-description-list .humidity-description {
+  width: 17%;
+}
+.main-container .main-forecast-block .forecast-description .forecast-description-list .wind-description {
+  width: 17%;
+}
+.main-container .main-forecast-block .weather-block {
+  padding-right: 0;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  border: 1px solid #80CBC4;
+  border-top: none;
+  box-shadow: inset 0 0 6px;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list .weather-block-item {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list .date-item {
+  padding-left: 3px;
+  font-size: 18px;
+  width: 15%;
+  text-align: center;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list .description-item {
+  width: 30%;
+  font-size: 17px;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list .weather-forecast-item {
+  width: 16%;
+}
+.main-container .main-forecast-block .weather-block .weather-block-list .wind-forecast-item {
+  width: 17%;
+}
+.footer {
+  background-color: #263238;
+  font-family: "Indie Flower";
+  color: #76FF03;
+  padding: 40px 0 15px 50px;
+  position: relative;
+  margin-top: -80px;
+  height: 80px;
+  clear: both;
+}

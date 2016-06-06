@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my app</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <script src="https://code.angularjs.org/1.5.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.4/angular-route.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+  <div ng-controller="homeCtrl">
+
+    <div class="header">
+          <a href="#" class="app-name">WEATHER FORECAST</a>
+          <select class="temp-unit-select" ng-model="degreeConvert">
+            <option value="celsius"><a href="#" class="temp-unit-option">&deg;C</a></option>
+            <option value="fahrenheit"><a href="#" class="temp-unit-option">&deg;F</a></option>
+          </select>
+    </div>
+
+    <div class="main-container {{ 'bg' + currentResponse.weather[0].icon }}">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+
+            <div class="time-block">
+              <p class="time-clock">{{ clock | date:'d MMM yy HH:mm ' }}UA time</p>
+            </div>
+
+            <div class="current-forecast">
+              <form class="city-form" ng-submit="submit()">
+                <input class="city-input" type="text" placeholder="enter location name" ng-model='cityName'>
+                <input class="city-input-button" type="submit" ng-click="flow()" value="Show">
+              </form>
+
+              <ul class="list-group current-weather">
+                <li class="list-group-item current-weather-city">{{ 'Current weather in ' + currentResponse.name }}</li>
+                <li class="list-group-item current-weather-item" ng-show="degreeConvert == 'celsius'"><span class="description">Temperature:</span>{{ ' ' + convertToCelsius(currentResponse.main.temp) + '&deg; C' }}</li>
+                <li class="list-group-item current-weather-item" ng-show="degreeConvert == 'fahrenheit'"><span class="description">Temperature:</span>{{ ' ' + convertToFahrenheit(currentResponse.main.temp) + '&deg; F' }}</li>
+                <li class="list-group-item current-weather-item"><span class="description">Description:</span>{{ ' ' + currentResponse.weather[0].description }} <img ng-src="{{ icon }}"></li>
+                <li class="list-group-item current-weather-item"><span class="description">Wind:</span>{{ ' ' + currentResponse.wind.speed + ' m/s'}}</li>
+                <li class="list-group-item current-weather-item"><span class="description">Humidity:</span>{{ ' ' + currentResponse.main.humidity + ' %'}}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-xs-12">
+            <div class="main-forecast-block">
+            
+              <h3 class="city-name">{{ 'Weather forecast in ' + currentResponse.name }}</h3>
+              <div class="day-links">
+                <a href="#/{{ getNewDay(0) }}" class="day-link" ng-click="fiveDays()">{{currentDate | date: 'MMM d'}}</a>
+                <a href="#/{{ getNewDay(86400000) }}" class="day-link" ng-click="fiveDays()">{{(currentDate.getTime() + 86400000) | date: 'MMM d'}}</a>
+                <a href="#/{{ getNewDay(172800000) }}" class="day-link" ng-click="fiveDays()">{{currentDate.getTime() + 172800000 | date: 'MMM d'}}</a>
+                <a href="#/{{ getNewDay(259200000) }}" class="day-link" ng-click="fiveDays()">{{(currentDate.getTime() + 259200000) | date: 'MMM d'}}</a>
+                <a href="#/{{ getNewDay(345600000) }}" class="day-link" ng-click="fiveDays()">{{currentDate.getTime() + 345600000 | date: 'MMM d'}}</a>
+                <a href="#/7" class="day-link more-days-button" ng-click="getMoreDays(7)">week</a>
+                <a href="#/14" class="day-link more-days-button" ng-click="getMoreDays(14)">2 weeks</a>
+              </div>
+
+              <div class="forecast-description">
+                <ul class="forecast-description-list">
+                  <li class="forecast-description-item time-description">time</li>
+                  <li class="forecast-description-item weather-image-description">weather description</li>
+                  <li class="forecast-description-item temperature-description">temperature</li>
+                  <li class="forecast-description-item wind-description">wind</li>
+                  <li class="forecast-description-item humidity-description">humidity</li>
+                </ul>
+              </div>
+
+              <div ng-hide="hideSeven">
+                <div class="weather-block" ng-repeat="data in fiveDaysResponse" ng-show="{{data | dateFormat}}">
+                  <weather-report weather-day="data" degree-unit="degreeConvert" convert-to-celsius="convertToCelsius(tempDegree)" convert-to-fahrenheit="convertToFahrenheit(tempDegree)" convert-to-date="convertToDate(dateTime)"></weather-report>
+                </div>
+              </div>
+
+              <div ng-show="hideSeven">
+                <div class="weather-block" ng-repeat="data in sevenDaysResponse">
+                  <weather-report-seven weather-day="data" degree-unit="degreeConvert" convert-to-celsius="convertToCelsius(tempDegree)" convert-to-fahrenheit="convertToFahrenheit(tempDegree)" convert-to-date="convertToDate(dateTime)"></weather-report-seven>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    
+    </div>
+
+    <div class="footer">Made by Yuriy Gevak</div>
+  
+  </div>
+
+  <script src="app.js"></script>
+</div>
+</body>
+</html>

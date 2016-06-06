@@ -1,0 +1,24 @@
+{
+  "name": "ctcchat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/lvivgeorge/ctcchat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/lvivgeorge/ctcchat#readme",
+  "devDependencies": {
+    "angular-translate": "^2.11.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-serve": "^1.2.0"
+  }
+}

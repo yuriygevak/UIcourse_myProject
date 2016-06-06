@@ -1,0 +1,8 @@
+<ul class="col-sm-6 weather-block-list">
+  <li class="weather-block-item date-item">{{ convertToDate({dateTime: weatherDay.dt}) | date: 'd/MM HH:mm' }}</li>
+  <li class="weather-block-item description-item"><img ng-src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png"><span class="description">{{ weatherDay.weather[0].description }}</span></li>
+  <li class="weather-block-item weather-forecast-item" ng-show="degreeUnit == 'celsius'">{{ convertToCelsius({ tempDegree: weatherDay.main.temp }) + ' &deg;C' }}</li>
+  <li class="weather-block-item weather-forecast-item" ng-show="degreeUnit == 'fahrenheit'">{{ convertToFahrenheit({ tempDegree: weatherDay.main.temp }) + ' &deg;F' }}</li>
+  <li class="weather-block-item wind-forecast-item">{{ weatherDay.wind.speed + ' m/s' }}</li>
+  <li class="weather-block-item weather-forecast-item">{{ weatherDay.main.humidity + ' %'}}</li>
+</ul>
